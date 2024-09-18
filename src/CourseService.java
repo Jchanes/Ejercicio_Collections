@@ -21,23 +21,29 @@ public class CourseService
         courses.put( "art_01", new Course( "Arts 1", "art_01", 8 ) );
         courses.put( "chem_01", new Course( "Chemistry 1", "chem_01", 8 ) );
         courses.put( "sport_01", new Course( "Sports 1", "sport_01", 8 ) );
-    }
+    }//courseService
 
     public void enrollStudent(String studentId, String courseId){
     	
-    }
+    }//enrollStudent
 
     public void unEnrollStudent(String studentId, String courseId){
-        //TODO implement so it removes the given course form the student
-    }
+    	Student student = new Student(studentId, courseId);
+    	student.unEnroll(studentId, courseId);
+    }//unenrollStudent
 
     public void displayCourseInformation(String courseId){
-        //TODO implement so it shows the course name, id and credits
-    }
+    	Student student = new Student(courseId);
+		student.getEnrolledCourses(courseId);
+    }//displayCourseInfo
 
     public void displayStudentInformation(String studentId){
         //TODO implement so it shows the student name, id and list of enrolled courses
-    }
+    	Student.foreach(studentId)->System.out.println("===============");
+; 
+    	
+    }//DisplayStudentInfo
+    
 
 
-}
+}// Class CourseService

@@ -12,7 +12,7 @@ public class Course
         this.name = name;
         this.id = id;
         this.credits = credits;
-    }//course
+    }//Course
 
     @Override
     public String toString()
@@ -20,4 +20,4 @@ public class Course
         return "Course{" + "name='" + name + '\'' + ", id='" + id + '\'' + ", credits=" + credits + '}';
     }//toString
     
-}//class course
+}//class Course
